@@ -1,0 +1,42 @@
+[PARAMETERS]
+//Media Information
+int MC :[1:3];
+// MediaContents 1.pure audio 2.pure video 3.audio+video
+
+int CF : [1:6];
+// ContainerFormats : 1. .mp3 2. .aac 3. .oga 4. .mp4 5. .webm 6. .ogv
+
+//Places
+int ME: [1:2];
+// MediaElements 1:video, 2:audio
+
+int TypePlace: [1:2];
+// T place: 1.source 2.MediaSource
+
+//Type Attributes
+int MIME, ACDV, VCDV :[1:4];
+// MIME, AudioCodec, VideoCodec 1.none, 2.corresponding 
+// Mismatch: 3.mismatch 4.invalid
+
+
+[STRENGTHS]
+default: 3;
+
+[CONSTRAINTS]
+(MC >=2) <-> (CF >=4);
+(MIME == 1) -> ((ACDV ==1) && (VCDV == 1));
+(MC==1) -> (VCDV ==1);
+(TP==2) -> ((MIME==2) && (ACDV<=2) && (VCDV<=2));
+
+//browsers' feature support
+//	S_M, S_D
+(ME<=2) -> ((TP!=2)&&((CF==1)||(CF==2)||(CF==4)));
+//	C_M
+(TP==1) -> (CF!=6);
+(TP==2) -> ((CF!=3)||(CF!=6));
+//	C_D, O
+(TP==2) -> ((CF!=3)||(CF!=6));
+//	E, IE
+(ME<=2) -> ((CF==1)||(CF==2)||(CF==4));
+//	F
+(TP==2) -> ((CF==2)||(CF==4)||(CF==5));
