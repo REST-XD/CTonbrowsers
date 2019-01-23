@@ -1,0 +1,10 @@
+Browser: Chrome
+Version: 71
+Platform & OS: Desktop, Windows
+Failure-inducing combinations:
+	1. Decoding
+	(1) TP=2, MC=1, CF=2, MIME=2 (1 FIC)
+	Effect: Failed playback.
+	(2) TP=2, MC=2, MIME=2, ACDV!=1,VCDV!=2 (4 FICs)
+	Demo web page: CTonbrowsers/demo/Decoding-1.html
+	Effect: Failed playback.
