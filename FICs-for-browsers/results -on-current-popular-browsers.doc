@@ -3,8 +3,92 @@ Version: 71
 Platform & OS: Desktop, Windows
 Failure-inducing combinations:
 	1. Decoding
-	(1) TP=2, MC=1, CF=2, MIME=2 (1 FIC)
+	Stage 1:
+	(1) TP=2, MC=1, CF=2, MIME=2 (1 FICs)
 	Effect: Failed playback.
 	(2) TP=2, MC=2, MIME=2, ACDV!=1,VCDV!=2 (4 FICs)
 	Demo web page: CTonbrowsers/demo/Decoding-1.html
 	Effect: Failed playback.
+	Stage 2:
+	(3) MIME=3/4 / VCDV=3/4 / ACDV=4 (5 FICs)
+	(4) MIME=2, ACDV=3, VCDV=1/2 (2 FICs)
+	(5) CF=2, MIME=2, ACDV=3 (1 FICs)
+	Effect: Failed playback
+	2. Fetching
+	(1) US=1/2, CS=1, CR!=1 (4 FICs)
+	(2) US=1, CS=2, CR=3
+	(3) US=2, CS=2, CR=3, PR=3
+	Effect: Failed playback
+	3. Content-Layout
+	(1) WR=none, WH!=none / WR!=none, WH=none, PWR!=PHR
+	Demo web page: CTonbrowsers/demo/Content-Layout-2.html
+	Effect: Pillar-boxed layout, or even with inconvenient control area
+	(2) WR=0.1, HR=10
+	Demo web page: CTonbrowsers/demo/Content-Layout-3.html
+	Effect: incomplete control bar
+	4. Audio-Play
+	Stage 1:
+	None for failed playback
+	(1) AF=2, IC=1, CN=1, BRM=1, SR=1/2
+	(2) AF=2, IC=1, CN=1/2, BRM=2, SR=1/4
+	(3) AF=2, IC=1, CN=3, BRM=1, SR=1
+	Demo web page: CTonbrowsers/demo/Audio-Play-4.html
+	Effect: Wrong duration in the control bar
+	Stage 2:
+	(4) IC=1, AF=1, CN=2, HCN=1, HBRM=1, WH=1, HSR!=1
+	(5) AF=2, HSR=3, HCN=3, HBRM=1, WH=2, CN=3, SR=3, BRM=2
+	(6) IC=1, AF=3, HSR=2/3
+	Demo web page: CTonBrowsers/demo/Audio-Play-5.html
+	Effect: Wrong duration in the control bar, comparing with tests in Stage 1
+	(7) AF=3, HSR=2/3
+	Demo web page: CTonBrowsers/demo/Audio-Play-6.html
+	Effect: Stretched sound, with playback speed being speeded up or slowed down
+	(8) AF=3, CN=1, HCN=3, IC=1
+	Demo web page: CTonBrowsers/demo/Audio-Play-7.html
+	Effect: Weird sound
+	5. Video-Play
+	Stage 1:
+	None for abnormal playback
+	(1) IC=1, VF=2
+	Effect: Failed playback
+Browser: IE
+Version: 11
+Platform & OS: Desktop, Windows
+Failure-inducing combinations:
+	1. Decoding
+	Stage 1:
+	(1) TP=2, MC=1, CF=1, MIME=1
+	(2) MC=1, CF=2
+	(3) TP=2, MC=2, CF=4
+	(4) ME=2, MC=2, CF=4
+	(5) ME=2, TP=1, MC=3, CF=4, MIME=2
+	(6) TP=2, MC=3, CF=4, MIME=2
+	Effect: Failed playback
+	Stage 2:
+	None
+	2. Fetching
+	None
+	3. Content-Layout
+	Same as Chrome, plus
+	(3) PF=gif, WR!=HR
+	Effect: Skewed image
+	4. Audio-Play
+	(1) IC=1, AF=2
+	Effect: Failed playback
+	5. Video-Play
+	Stage 1:
+	(1) VF=1, CSS=3
+	Effect: Failed playback
+	(2) VF=1, IC=2
+	Effect: Incomplete playback
+	(3) IC=2, VF=1, CSS=2
+	Effect: Blank video
+	Stage 2:
+	(4) FCSS!=1, FFR!=1
+	Effect: Macroblicking
+	
+	
+	
+	
+	
+	
