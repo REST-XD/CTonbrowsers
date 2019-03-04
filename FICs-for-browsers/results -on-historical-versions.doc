@@ -1,1 +1,128 @@
+The summarized failure inducing combinations for historical versions of chrome are as follows.
+We first introduce the FIC, the IPM it belongs to and the possible undesirable effect.
+Then we draw a table to demonstrate the browser versions that a FIC might influence.
+
+1.	 
+FIC: TP = media, MC = audio+video, CF = mp4
+Model: decoding
+Effect: failed playback
+2.
+FIC: TP = MediaSource, MC = pure audio, CF = aac, MIME = corresponding
+Model: decoding
+Effect: failed playback
+3.
+FIC: TP = MediaSource, MC = pure video, MIME = corresponding, ACDV = corresponding
+Model: decoding
+Effect: failed playback
+4.
+FIC: TP = MediaSource, MC = pure video / audio+video, MIME = corresponding, CDV = none
+Model: decoding
+Effect: failed playback
+5.
+FIC: TP = MediaSource, MC = audio+video, MIME = corresponding, ACDV = none
+Model: decoding
+Effect: failed playback
+6.
+FIC: US = relative, CS = default
+Model: fetching
+Effect: failed loading of media
+7.
+FIC: US = http / https, CS = default, CR = anonymous / use-credentials
+Model: fetching
+Effect: failed loading of media
+8.
+FIC: US = http / https, CS = allow-all, CR = none / anonymous
+Model: fetching
+Effect: failed loading of media
+9.
+FIC: US = http / https, CS = allow-all, CR = use-credentials
+Model: fetching
+Effect: failed loading of media
+10.
+FIC: ME = video, US = http / https, CS = default, CR = anonymous / use-credentials
+Model: fetching
+Effect: failed loading of poster
+11.
+FIC: ME = video, US = http / https, CS = allow-all, CR = use-credentials
+Model: fetching
+Effect: failed loading of poster
+12.
+FIC: ME = video, US = http, CS = default, CR = use-credentials, PR = auto
+Model: fetching
+Effect: failed loading of poster
+13.
+FIC: AF = aac, IC = media, OC = media
+Model: audio-play
+Effect: failed playback
+14.
+FIC: AF = aac, IC = media, SR = 8 / 96 kHz
+Model: audio-play
+Effect: the displayed duration in the control bar is a wrong number
+15.
+FIC: AF = oga, IC = media, WH = first, HSR = less / more
+Model: audio-play
+Effect: the displayed duration in the control bar is a wrong number
+16.
+FIC: AF = oga, SR != 48kHz, IC = media, WH = first, HSR = less / more, HCN = equal
+Model: audio-play
+Effect: speeded-up or slowed-down playback speed
+17.
+FIC: AF = aac, BRM = vbr, IC = media, WH = second, HBRM = different
+Model: audio-play
+Effect: speeded-up or slowed-down playback speed
+18.
+FIC: AF = oga, CN = 5.1, IC = media, WH = first, HSR = equal
+Model: audio-play
+Effect: distorted sound
+19.
+FIC: VF = mp4, FR = 2 ftps
+Model: video-play
+Effect: failed playback
+20.
+FIC: VF = mp4, FR = 25 ftps, RR = 720p
+Model: video-play
+Effect: failed playback
+21.
+FIC: VF = webm, IC = media
+Model: video-play
+Effect: failed playback
+22.
+FIC: CSS = 4:4:4, IC = media
+Model: video-play
+Effect: failed playback
+23.
+FIC: VF = mp4, IC = media, FR = 2ftps, CSS = 4:2:2, RR = 720p
+Model: video-play
+Effect: wrong duration
+24.
+FIC: VF = mp4 / ogv, IC = media, CSS != 4:2:0
+Model: video-play
+Effect: abnormal video image
+
+
+	V12	V26	V50	V60	V71
+1	+	+			
+2			+	+	+
+3			+	+	+
+4			+	+	+
+5			+	+	+
+6	+	+			
+7		+	+	+	+
+8			+		
+9			+	+	+
+10			+	+	+
+11			+	+	+
+12		+	+	+	+
+13	+	+			
+14				+	+
+15				+	+
+16			+	+	+
+17			+		
+18			+	+	+
+19	+				
+20	+				
+21		+	+	+	+
+22		+			
+23	+				
+24	+				
 
