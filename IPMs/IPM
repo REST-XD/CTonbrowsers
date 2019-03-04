@@ -1,3 +1,8 @@
+The input parameter models for combinatorial testing are constructed with parameters and values, strengths and constraints.
+
+
+We give the decoding IPM for an example.
+
 [PARAMETERS]
 //Media Information
 int MC :[1:3];
