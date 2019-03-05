@@ -1,0 +1,1 @@
+Using MediaSource API to play an AAC audio file which is 48kHz, 1 chanel and variable bitrate mode and have its header been modified to be fewer channel and constant bitrate mode.
