@@ -113,7 +113,7 @@ Failure-inducing combinations:
 	Effect: Stretched sound
 	(7) AF=3, CN=1, HCN=3, IC=1
 	Effect: Weird sound
-	(8) HCN=2, AF=2, CN=1, BRM=1, IC=1, OC=2 
+	(8) HCN=2, AF=2, CN=1, BRM=1, IC=2, OC=1 
 	Demo web page: CTonBrowsers/demo/Audio-Play-6.html
 	Effect: Webpage crash
 	5. Video-Play
