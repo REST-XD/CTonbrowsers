@@ -26,7 +26,7 @@
 			var mime = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 			try{
 				var sourceBuffer = mediaSource.addSourceBuffer(mime); 
-				var mediaUrl = '../ct1_v.mp4';
+				var mediaUrl = '../1.mp4';
 				fetch(mediaUrl)
 					.then(function(response){
 						return response.arrayBuffer();
