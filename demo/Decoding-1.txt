@@ -1,2 +1,1 @@
-Possible effect: failed playback 
-On browsers like: Chrome, Opera
+Specifying video and audio codecs for video file with only video track.
