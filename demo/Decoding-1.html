@@ -1,1 +1,48 @@
+!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<audio controls>
+</audio>
+	<script type="text/javascript">
 
+		var video = document.querySelector('video')||document.querySelector('audio');
+
+		var MSerror;
+		window.MediaSource = window.MediaSource || window.WebKitMediaSource;
+		try{
+			var mediaSource = new MediaSource;
+		}catch(err){
+			MSerror = err.name;
+			console.log(err.name);
+		}
+
+		video.src = URL.createObjectURL(mediaSource);
+		mediaSource.addEventListener('sourceopen', sourceOpen)
+
+		function sourceOpen () {
+			var mediaSource = this;
+			var mime = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+			try{
+				var sourceBuffer = mediaSource.addSourceBuffer(mime); 
+				var mediaUrl = '../ct1_v.mp4';
+				fetch(mediaUrl)
+					.then(function(response){
+						return response.arrayBuffer();
+					})
+					.then(function(arrayBuffer){
+						sourceBuffer.addEventListener('updateend', function (e) {
+							mediaSource.endOfStream();
+							video.play();
+						});
+							sourceBuffer.appendBuffer(arrayBuffer); 
+						});
+			}catch(err){
+				MSerror = err.name;
+				console.log(err.name);
+			}
+		};
+	</script>
+</body>
+</html>
