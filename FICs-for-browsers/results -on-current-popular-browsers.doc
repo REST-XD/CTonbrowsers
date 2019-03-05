@@ -21,10 +21,8 @@ Failure-inducing combinations:
 	Effect: Failed playback
 	3. Content-Layout
 	(1) WR=none, WH!=none / WR!=none, WH=none, PWR!=PHR
-	Demo web page: CTonbrowsers/demo/Content-Layout-2.html
 	Effect: Pillar-boxed layout, or even with inconvenient control area
 	(2) WR=0.1, HR=10
-	Demo web page: CTonbrowsers/demo/Content-Layout-3.html
 	Effect: incomplete control bar
 	4. Audio-Play
 	Stage 1:
@@ -32,19 +30,19 @@ Failure-inducing combinations:
 	(1) AF=2, IC=1, CN=1, BRM=1, SR=1/2
 	(2) AF=2, IC=1, CN=1/2, BRM=2, SR=1/4
 	(3) AF=2, IC=1, CN=3, BRM=1, SR=1
-	Demo web page: CTonbrowsers/demo/Audio-Play-4.html
+	Demo web page: CTonbrowsers/demo/Audio-Play-2.html
 	Effect: Wrong duration in the control bar
 	Stage 2:
 	(4) IC=1, AF=1, CN=2, HCN=1, HBRM=1, WH=1, HSR!=1
 	(5) AF=2, HSR=3, HCN=3, HBRM=1, WH=2, CN=3, SR=3, BRM=2
 	(6) IC=1, AF=3, HSR=2/3
-	Demo web page: CTonBrowsers/demo/Audio-Play-5.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-3.html
 	Effect: Wrong duration in the control bar, comparing with tests in Stage 1
 	(7) AF=3, HSR=2/3
-	Demo web page: CTonBrowsers/demo/Audio-Play-6.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-4.html
 	Effect: Stretched sound, with playback speed being speeded up or slowed down
 	(8) AF=3, CN=1, HCN=3, IC=1
-	Demo web page: CTonBrowsers/demo/Audio-Play-7.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-5.html
 	Effect: Weird sound
 	5. Video-Play
 	Stage 1:
@@ -116,7 +114,7 @@ Failure-inducing combinations:
 	(7) AF=3, CN=1, HCN=3, IC=1
 	Effect: Weird sound
 	(8) HCN=2, AF=2, CN=1, BRM=1, IC=1, OC=2 
-	Demo web page: CTonBrowsers/demo/Audio-Play-8.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-6.html
 	Effect: Webpage crash
 	5. Video-Play
 	Stage 1:
