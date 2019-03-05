@@ -36,13 +36,12 @@ Failure-inducing combinations:
 	(4) IC=1, AF=1, CN=2, HCN=1, HBRM=1, WH=1, HSR!=1
 	(5) AF=2, HSR=3, HCN=3, HBRM=1, WH=2, CN=3, SR=3, BRM=2
 	(6) IC=1, AF=3, HSR=2/3
-	Demo web page: CTonBrowsers/demo/Audio-Play-3.html
 	Effect: Wrong duration in the control bar, comparing with tests in Stage 1
 	(7) AF=3, HSR=2/3
-	Demo web page: CTonBrowsers/demo/Audio-Play-4.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-3.html
 	Effect: Stretched sound, with playback speed being speeded up or slowed down
 	(8) AF=3, CN=1, HCN=3, IC=1
-	Demo web page: CTonBrowsers/demo/Audio-Play-5.html
+	Demo web page: CTonBrowsers/demo/Audio-Play-4.html
 	Effect: Weird sound
 	5. Video-Play
 	Stage 1:
