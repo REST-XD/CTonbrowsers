@@ -6,7 +6,9 @@ Failure-inducing combinations:
 	Stage 1:
 	(1) TP=2, MC=1, CF=2, MIME=2 (1 FICs)
 	Effect: Failed playback.
-	(2) TP=2, MC=2, MIME=2, ACDV!=1,VCDV!=2 (4 FICs)
+	(2) TP=2, MC=2, MIME=2, ACDV=1,VCDV=1 or ACDV=2,VCDV=1 or ACDV=2,VCDV=2 (3 FICs)
+	
+	and TP=2, MC=3, MIME=2, ACDV=1,VCDV=1 or ACDV=1,VCDV=2 or ACDV=2,VCDV=1 (3 FICs)
 	Demo web page: CTonbrowsers/demo/Decoding-1.html
 	Effect: Failed playback.
 	Stage 2:
