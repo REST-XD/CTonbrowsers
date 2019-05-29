@@ -17,7 +17,7 @@ Failure-inducing combinations:
 	(6-8) MIME=4 / VCDV=4 / ACDV=4 (3 FICs)
 	(9) MIME=3, VCDV=2
 	(10) MIME=2, VCDV=3, TP=1
-	(11) VCDV=1, TP=2, MC=1
+	(11) VCDV=1, TP=2, MC=1, CF=1
 	(12) MIME=2, ACDV=3, VCDV=1, TP=1, CF=1
 	(13) MIME=3, TP=2, CF=4
 	(14) MIME=3, ACDV=2, VCDV=1, TP=1, MC=1, CF=3
