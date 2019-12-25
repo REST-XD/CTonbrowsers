@@ -1,9 +1,6 @@
 # CTonbrowsers
 combinatorial testing on multimedia support
 
-## IPMs
-We present the input parameter models for CT test generation in this folder.
-
 ## FICs-for-browsers
 This folder contains the browser information and the verified failure-inducing combinations for each browser.
 
